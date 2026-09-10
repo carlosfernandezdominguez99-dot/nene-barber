@@ -123,6 +123,10 @@ button{ font-family:inherit; }
   font-size:clamp(2.6rem, 5.4vw, 4.6rem);
   line-height:.98; letter-spacing:-.01em;
   text-transform:uppercase;
+  overflow-wrap:break-word;
+}
+@media (max-width:480px){
+  .section-title{ font-size:clamp(2rem, 8.5vw, 2.6rem); }
 }
 .section-lead{
   margin-top:1.4em; max-width:34ch; color:var(--paper-dim);
@@ -494,7 +498,7 @@ button{ font-family:inherit; }
    ========================================================= */
 .formaciones-section{ max-width:var(--container); margin:0 auto; }
 .formacion-card{
-  margin-top:clamp(50px,8vh,90px); max-width:720px;
+  margin:clamp(50px,8vh,90px) auto 0; max-width:720px; text-align:left;
   border:1px solid var(--violet-line); border-radius:4px;
   padding:clamp(28px,4vw,44px); background:var(--panel);
   box-shadow:0 0 60px rgba(124,58,237,0.12);
