@@ -8,6 +8,48 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var root = document.documentElement;
 
+  /* ---------- Gate de acceso (pantalla de contraseña) ---------- */
+  (function () {
+    var GATE_KEY = "nenebarber_gate_ok";
+    var PASSWORD = "NENEBARBER0707";
+    var gate = document.getElementById("gate");
+    if (!gate) return;
+
+    function unlock(persist) {
+      gate.classList.remove("is-error");
+      gate.classList.add("is-unlocked");
+      document.body.classList.remove("gate-active");
+      if (persist) {
+        try { localStorage.setItem(GATE_KEY, "1"); } catch (e) {}
+      }
+    }
+
+    var alreadyUnlocked = false;
+    try { alreadyUnlocked = localStorage.getItem(GATE_KEY) === "1"; } catch (e) {}
+
+    if (alreadyUnlocked) {
+      unlock(false);
+    } else {
+      document.body.classList.add("gate-active");
+    }
+
+    var form = document.getElementById("gate-form");
+    var input = document.getElementById("gate-input");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var value = (input.value || "").trim().toUpperCase();
+        if (value === PASSWORD) {
+          unlock(true);
+        } else {
+          gate.classList.add("is-error");
+          input.value = "";
+          input.focus();
+        }
+      });
+    }
+  })();
+
   /* ---------- Year ---------- */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
