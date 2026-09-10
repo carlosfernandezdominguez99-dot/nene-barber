@@ -403,7 +403,7 @@ button{ font-family:inherit; }
 .studio-fig--wide{ aspect-ratio:3/4; }
 .studio-fig img{ width:100%; height:100%; object-fit:cover; transition:transform 1s var(--ease-out); }
 .studio-fig:hover img{ transform:scale(1.05); }
-.studio-head{ max-width:640px; }
+.studio-head{ max-width:640px; margin:0; }
 
 @media (max-width:860px){
   .studio-media{ grid-template-columns:1fr 1fr; }
