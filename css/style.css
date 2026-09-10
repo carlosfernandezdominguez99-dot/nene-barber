@@ -322,6 +322,14 @@ button{ font-family:inherit; }
   max-width:var(--container); margin:0 auto;
   padding-bottom:clamp(60px,9vh,110px);
 }
+.nene-buildup{
+  margin-top:.3em; margin-bottom:1.2em; max-width:30ch;
+  color:var(--paper-dim); font-size:clamp(.95rem,1.15vw,1.05rem); line-height:1.65;
+}
+.nene-hoy{
+  font-family:var(--font-serif); font-style:italic; font-weight:400;
+  color:var(--violet); font-size:clamp(1.3rem,2.2vw,1.7rem); margin-bottom:.1em;
+}
 .nene-copy p{ color:var(--paper-dim); font-size:clamp(1rem,1.25vw,1.15rem); line-height:1.75; max-width:46ch; }
 .nene-copy p + p{ margin-top:1.3em; }
 .nene-tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top:2em; }
