@@ -221,7 +221,7 @@ button{ font-family:inherit; }
 }
 .hero-media{ position:absolute; inset:0; }
 .hero-img{
-  width:100%; height:100%; object-fit:cover; object-position:50% 22%;
+  width:100%; height:100%; object-fit:cover; object-position:66% 20%;
   will-change:transform;
 }
 .hero-scrim{
@@ -319,7 +319,7 @@ button{ font-family:inherit; }
 .nene-tags span:first-child{ color:var(--violet); border-color:var(--violet-line); font-family:var(--font-display); }
 
 .nene-portrait-wrap{ position:relative; max-width:var(--container); margin:0 auto; }
-.nene-portrait-wrap img{ width:100%; height:clamp(320px,62vh,760px); object-fit:cover; object-position:50% 18%; }
+.nene-portrait-wrap img{ width:100%; height:clamp(320px,62vh,760px); object-fit:cover; object-position:64% 16%; }
 .portrait-cap{
   position:absolute; left:var(--gutter); bottom:24px; font-size:11.5px; letter-spacing:.2em;
   text-transform:uppercase; color:var(--paper-dim); font-weight:600;
