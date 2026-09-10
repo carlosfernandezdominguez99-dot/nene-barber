@@ -167,8 +167,9 @@ button{ font-family:inherit; }
 }
 .nav-mark{
   font-family:var(--font-display); font-weight:800; font-size:15px;
-  letter-spacing:.02em; display:flex; gap:.4em;
+  letter-spacing:.02em; display:flex; align-items:center; gap:.6em;
 }
+.nav-mark-icon{ height:19px; width:auto; display:block; }
 .nav-mark-n{ color:var(--paper); }
 .nav-mark-b{ color:var(--paper-dim); }
 
@@ -427,7 +428,7 @@ button{ font-family:inherit; }
 .studio-fig img{ width:100%; height:100%; object-fit:cover; transition:transform 1s var(--ease-out); }
 .studio-fig:hover{ box-shadow:inset 0 0 0 1px var(--violet-line); }
 .studio-fig:hover img{ transform:scale(1.05); }
-.studio-head{ max-width:640px; margin:0; }
+.studio-head{ max-width:640px; }
 
 @media (max-width:860px){
   .studio-media{ grid-template-columns:1fr 1fr; }
